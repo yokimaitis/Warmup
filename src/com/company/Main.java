@@ -10,5 +10,6 @@ public class Main {
         WLN.write("doobleX = " + Warmup.doobleX("aaxxxa"));
         int x[] = {0,0,0,0,0,0,0,0,0,1,2,3};
         WLN.write(Warmup.array123(x));
+        WLN.write(Warmup.altPairs("abrakadabra"));
     }
 }

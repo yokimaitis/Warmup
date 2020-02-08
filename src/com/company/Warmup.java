@@ -24,7 +24,8 @@ public class Warmup {
         }
 
     public static  String altPairs(String instr){
-
-    return "asas";
+        String out="";
+        out=out+instr.charAt(0)+instr.charAt(1)+instr.charAt(4)+instr.charAt(5)+instr.charAt(8)+instr.charAt(9);
+    return out;
     }
 }
