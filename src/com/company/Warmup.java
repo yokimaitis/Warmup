@@ -23,9 +23,16 @@ public class Warmup {
         return "false";
         }
 
-    public static  String altPairs(String instr){
+    public static String altPairs(String instr){
         String out="";
         out=out+instr.charAt(0)+instr.charAt(1)+instr.charAt(4)+instr.charAt(5)+instr.charAt(8)+instr.charAt(9);
     return out;
+    }
+
+    public static boolean noTripples(int n[]){
+        for (int i = 0; i < n.length-1 ; i++) {
+            if (n[i]==n[i+1] && n[i]==n[i+2]) return true;
+         }
+        return false;
     }
 }
