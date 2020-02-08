@@ -8,10 +8,17 @@ public class Warmup {
         }
     return outStr;
     }
-    public static String doobleX(String instr){
-        for (int i = 0; i < instr.length() ; i++) {
-            if (instr.charAt(i) == 'x' && instr.charAt(i+1) == 'x') return "true";
+    public static String doobleX(String inStr) {
+        for (int i = 0; i < inStr.length(); i++) {
+            if (inStr.charAt(i) == 'x' && inStr.charAt(i + 1) == 'x') return "true";
         }
         return "false";
     }
+
+    public static String array123(int n[]){
+        for (int i = 0; i < n.length-1 ; i++){
+            if (n[i]==1 && n[i+1]==2 && n[i+2]==3) return "true";
+        }
+        return "false";
+        }
 }

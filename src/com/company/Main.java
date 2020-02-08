@@ -6,8 +6,9 @@ public class Main {
         // write your code here
         //WLN.write(RLN.read());
 
-        WLN.write(Warmup.stringTimes("24e",3));
-        WLN.write(Warmup.doobleX("aaxxxa"));
-
+        WLN.write("StringTimes = " + Warmup.stringTimes("24e",3));
+        WLN.write("doobleX = " + Warmup.doobleX("aaxxxa"));
+        int x[] = {0,0,0,0,0,0,0,0,0,1,2,3};
+        WLN.write(Warmup.array123(x));
     }
 }
