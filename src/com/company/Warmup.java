@@ -4,15 +4,16 @@ public class Warmup {
     public static String stringTimes(String inStr, int n){
         String outStr="";
         for (int i = 0; i < n; i++) {
-            outStr=outStr+inStr;
+            outStr += inStr;
         }
     return outStr;
     }
-    public static String doobleX(String inStr) {
+
+    public static boolean doobleX(String inStr) {
         for (int i = 0; i < inStr.length(); i++) {
-            if (inStr.charAt(i) == 'x' && inStr.charAt(i + 1) == 'x') return "true";
+            if (inStr.charAt(i) == 'x' && inStr.charAt(i + 1) == 'x') return true;
         }
-        return "false";
+        return false;
     }
 
     public static String array123(int n[]){
@@ -21,4 +22,9 @@ public class Warmup {
         }
         return "false";
         }
+
+    public static  String altPairs(String instr){
+
+    return "asas";
+    }
 }
