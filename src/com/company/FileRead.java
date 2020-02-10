@@ -11,7 +11,7 @@ public class FileRead {
         List<String> str = new ArrayList<>();
         //List<String> strings = Files.readAllLines(Paths.get("111.txt"));
 
-        try (FileReader fr = new FileReader(String.valueOf(Paths.get("111.txt")));
+        try (FileReader fr = new FileReader(String.valueOf(Paths.get(fileName)));
              Scanner scan = new Scanner(fr)) {
 
             while (scan.hasNextLine()){
