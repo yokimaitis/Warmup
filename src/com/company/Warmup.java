@@ -93,7 +93,7 @@ public class Warmup {
     }
 
     public static String stringX(String instr) {
-        String out = "";
+        String out = instr;
         if (instr.charAt(0) == 'x') out = 'x' + instr.replace("x", "");
         if (instr.charAt(instr.length() - 1) == 'x') out = instr.replace("x", "") + 'x';
         if ((instr.charAt(0) == 'x') && (instr.charAt(instr.length() - 1) == 'x'))
