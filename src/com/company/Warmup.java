@@ -35,4 +35,19 @@ public class Warmup {
          }
         return false;
     }
+
+    public static String frontTimes(String instr, int n){
+        String outstr = "";
+        if (instr.length()<3) outstr=instr.repeat(n);
+        else outstr=instr.substring(0,3).repeat(n);
+        return outstr;
+    }
+
+    public static Integer arrayCount9(int in[]){
+        int x = 0;
+        for (int i = 0; i < in.length-1 ; i++) {
+            if (in[i]==9) x++;
+        }
+        return x;
+    }
 }
