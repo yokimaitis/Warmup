@@ -19,9 +19,10 @@ public class Main {
         WLN.write(Warmup.noTripples(y));
 
         inputs = FileRead.read("C:\\Users\\kostya.GOMODS\\IdeaProjects\\Warmup\\src\\com\\company\\111.txt");
-        WLN.write(inputs.get(0));
-        WLN.write(inputs.get(1));
 
+        for (int i = 0; i <inputs.size() ; i++) {
+            WLN.write(inputs.get(i));
+        }
 
     }
 }
