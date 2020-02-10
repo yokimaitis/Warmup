@@ -20,6 +20,7 @@ public class Main {
         WLN.write(Warmup.frontTimes("ChoChoCho",2));
         int z[] = {0,4,5,9,3,2,9,9,9,0,9};
         WLN.write(Warmup.arrayCount9(z));
+        WLN.write(Warmup.stringMatch("xxcaazz","xxbaaz"));
 
 //      inputs = FileRead.read("C:\\Users\\kostya.GOMODS\\IdeaProjects\\Warmup\\src\\com\\company\\111.txt");
 //
