@@ -22,6 +22,8 @@ public class Main {
         WLN.write(Warmup.arrayCount9(z));
         WLN.write(Warmup.stringMatch("xxcaazz","xxbaaz"));
         WLN.write(Warmup.removeYak("asdfgyakfgfhh"));
+        int l[] = {0,4,2,7,1,6,5};
+        WLN.write(Warmup.has271(l));
 
 //      inputs = FileRead.read("C:\\Users\\kostya.GOMODS\\IdeaProjects\\Warmup\\src\\com\\company\\111.txt");
 //

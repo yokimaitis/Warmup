@@ -66,5 +66,15 @@ public class Warmup {
             }
         return out;
     }
+
+    public static boolean has271(int in[]) {
+        int x = 0;
+        for (int i = 0; i < in.length-1 ; i++) {
+            x=in[i];
+            if ((in[i+1]==x+5) && (in[i+2]==x-1)) return true;
+        }
+        return false;
+    }
+
 }
 
