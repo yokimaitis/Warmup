@@ -18,7 +18,7 @@ public class Main {
         int y[] = {0,1,0,3,3,3,4,2};
         WLN.write(Warmup.noTripples(y));
 
-        inputs = FileRead.read();
+        inputs = FileRead.read("C:\\Users\\kostya.GOMODS\\IdeaProjects\\Warmup\\src\\com\\company\\111.txt");
         WLN.write(inputs.get(0));
         WLN.write(inputs.get(1));
 

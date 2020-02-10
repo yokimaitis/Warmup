@@ -5,10 +5,10 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class FileRead {
-    public static ArrayList read() throws Exception {
+    public static ArrayList read(String fileName) throws Exception {
         ArrayList str = new ArrayList();
 
-        FileReader fr = new FileReader("c:\\Users\\kostya.GOMODS\\IdeaProjects\\Warmup\\src\\com\\company\\111.txt");
+        FileReader fr = new FileReader(fileName);
         Scanner scan = new Scanner(fr);
 
         while (scan.hasNextLine()){
