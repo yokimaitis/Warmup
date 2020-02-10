@@ -45,7 +45,7 @@ public class Warmup {
 
     public static Integer arrayCount9(int in[]){
         int x = 0;
-        for (int i = 0; i < in.length-1 ; i++) {
+        for (int i = 0; i < in.length ; i++) {
             if (in[i]==9) x++;
         }
         return x;
