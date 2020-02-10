@@ -89,15 +89,16 @@ public class Warmup {
         for (int i = 0; i < instr.length(); i++) {
             out = out + instr.substring(0, i + 1);
         }
-     return out;
+        return out;
     }
 
-    public static String stringX(String instr){
+    public static String stringX(String instr) {
         String out = "";
-        if (instr.charAt(0)=='x') out='x'+instr.replace("x","");
-        if (instr.charAt(instr.length()-1)=='x') out=instr.replace("x","")+'x';
-        if  ((instr.charAt(0)=='x') && (instr.charAt(instr.length()-1)=='x')) out='x'+instr.replace("x","")+'x';
-    return out;
+        if (instr.charAt(0) == 'x') out = 'x' + instr.replace("x", "");
+        if (instr.charAt(instr.length() - 1) == 'x') out = instr.replace("x", "") + 'x';
+        if ((instr.charAt(0) == 'x') && (instr.charAt(instr.length() - 1) == 'x'))
+            out = 'x' + instr.replace("x", "") + 'x';
+        return out;
     }
 }
 
