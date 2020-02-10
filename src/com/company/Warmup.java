@@ -53,28 +53,51 @@ public class Warmup {
 
     public static Integer stringMatch(String instr1, String instr2) {
         int out = 0;
-        for (int i = 0; i < instr1.length()-1; i++) {
+        for (int i = 0; i < instr1.length() - 1; i++) {
             if (instr2.contains(instr1.substring(i, i + 2))) out++;
         }
         return out;
     }
 
-    public static String removeYak(String instr){
+    public static String removeYak(String instr) {
         String out = instr;
-            if (instr.contains("yak")) {
-              out=instr.replace("yak","");
-            }
+        if (instr.contains("yak")) {
+            out = instr.replace("yak", "");
+        }
         return out;
     }
 
     public static boolean has271(int in[]) {
         int x = 0;
-        for (int i = 0; i < in.length-1 ; i++) {
-            x=in[i];
-            if ((in[i+1]==x+5) && (in[i+2]==x-1)) return true;
+        for (int i = 0; i < in.length - 1; i++) {
+            x = in[i];
+            if ((in[i + 1] == x + 5) && (in[i + 2] == x - 1)) return true;
         }
         return false;
     }
 
+    public static Integer countXX(String instr) {
+        int out = 0;
+        for (int i = 0; i < instr.length() - 1; i++) {
+            if (instr.charAt(i) == 'x' && instr.charAt(i + 1) == 'x') out++;
+        }
+        return out;
+    }
+
+    public static String stringExplosion(String instr) {
+        String out = "";
+        for (int i = 0; i < instr.length(); i++) {
+            out = out + instr.substring(0, i + 1);
+        }
+     return out;
+    }
+
+    public static String stringX(String instr){
+        String out = "";
+        if (instr.charAt(0)=='x') out='x'+instr.replace("x","");
+        if (instr.charAt(instr.length()-1)=='x') out=instr.replace("x","")+'x';
+        if  ((instr.charAt(0)=='x') && (instr.charAt(instr.length()-1)=='x')) out='x'+instr.replace("x","")+'x';
+    return out;
+    }
 }
 

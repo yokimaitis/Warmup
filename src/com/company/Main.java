@@ -24,6 +24,9 @@ public class Main {
         WLN.write(Warmup.removeYak("asdfgyakfgfhh"));
         int l[] = {0,4,2,7,1,6,5};
         WLN.write(Warmup.has271(l));
+        WLN.write(Warmup.countXX("xxxx"));
+        WLN.write(Warmup.stringExplosion("Code"));
+        WLN.write(Warmup.stringX("xAaxxxxbbxxVBx"));
 
 //      inputs = FileRead.read("C:\\Users\\kostya.GOMODS\\IdeaProjects\\Warmup\\src\\com\\company\\111.txt");
 //
