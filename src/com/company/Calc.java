@@ -1,12 +1,14 @@
 package com.company;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Calc {
-    public static void calculate() {
-        List<String> inputMass = new ArrayList<>();
-        inputMass = FileRead.read("C:\\Users\\kostya.GOMODS\\IdeaProjects\\Warmup\\src\\com\\company\\111.txt");
+    List<String> inputMass = new ArrayList<>();
+
+    void calculate() throws IOException {
+        inputMass = FileRead.read("111.txt");
         String str = "";
         for (int i = 0; i < 1; i++) {
             str = inputMass.get(i);

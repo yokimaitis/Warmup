@@ -1,10 +1,14 @@
 package com.company;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         // write your code here
         //WLN.write(RLN.read());
 
@@ -28,13 +32,7 @@ public class Main {
         WLN.write(Warmup.stringExplosion("Code"));
         WLN.write(Warmup.stringX("xAaxxxxbbxxVBx"));
 
-        Calc.calculate();
-
-//      inputs = FileRead.read("C:\\Users\\kostya.GOMODS\\IdeaProjects\\Warmup\\src\\com\\company\\111.txt");
-//
-//        for (int i = 0; i <inputs.size() ; i++) {
-//            WLN.write(inputs.get(i));
-//        }
-
-    }
+        new Calc().calculate();
+      //  List<String> strings = Files.readAllLines(Paths.get("111.txt"));
+        }
 }
