@@ -33,6 +33,5 @@ public class Main {
         WLN.write(Warmup.stringX("xAaxxxxbbxxVBx"));
 
         new Calc().calculate();
-      //  List<String> strings = Files.readAllLines(Paths.get("111.txt"));
         }
 }
