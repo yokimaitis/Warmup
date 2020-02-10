@@ -59,5 +59,12 @@ public class Warmup {
         return out;
     }
 
+    public static String removeYak(String instr){
+        String out = instr;
+            if (instr.contains("yak")) {
+              out=instr.replace("yak","");
+            }
+        return out;
+    }
 }
 

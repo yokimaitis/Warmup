@@ -21,6 +21,7 @@ public class Main {
         int z[] = {0,4,5,9,3,2,9,9,9,0,9};
         WLN.write(Warmup.arrayCount9(z));
         WLN.write(Warmup.stringMatch("xxcaazz","xxbaaz"));
+        WLN.write(Warmup.removeYak("asdfgyakfgfhh"));
 
 //      inputs = FileRead.read("C:\\Users\\kostya.GOMODS\\IdeaProjects\\Warmup\\src\\com\\company\\111.txt");
 //
