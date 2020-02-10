@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Main {
 
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         // write your code here
         //WLN.write(RLN.read());
 
@@ -27,6 +27,8 @@ public class Main {
         WLN.write(Warmup.countXX("xxxx"));
         WLN.write(Warmup.stringExplosion("Code"));
         WLN.write(Warmup.stringX("xAaxxxxbbxxVBx"));
+
+        Calc.calculate();
 
 //      inputs = FileRead.read("C:\\Users\\kostya.GOMODS\\IdeaProjects\\Warmup\\src\\com\\company\\111.txt");
 //
