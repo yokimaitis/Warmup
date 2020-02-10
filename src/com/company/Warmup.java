@@ -54,9 +54,7 @@ public class Warmup {
     public static Integer stringMatch(String instr1, String instr2) {
         int out = 0;
         for (int i = 0; i < instr1.length()-1; i++) {
-            if (instr2.contains(instr1.substring(i, i + 2))) {
-                out++;
-            }
+            if (instr2.contains(instr1.substring(i, i + 2))) out++;
         }
         return out;
     }
