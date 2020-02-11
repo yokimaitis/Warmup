@@ -35,59 +35,59 @@ public class Calc {
 
     void calculate() {
         inputMass = FileRead.read("111.txt");
-        String str = "";
+        String currentLine = "";
         float x = 0.0f;
         float[] out = new float[4];
         for (int i = 0; i < inputMass.size(); i++) {
-            str = inputMass.get(i);
+            currentLine = inputMass.get(i);
             oNumber = 0;
-            for (int j = 0; j < str.length(); j++) {
-                if ((Character.isDigit(str.charAt(j))) | str.charAt(j) == '.') {
+            for (int j = 0; j < currentLine.length(); j++) {
+                if ((Character.isDigit(currentLine.charAt(j))) | currentLine.charAt(j) == '.') {
                 } else oNumber++;
             }
 
-            for (int xOper = 1; xOper <= oNumber; xOper++) {
-                if (str.indexOf('*') > 0) {
-                    System.out.println("Входная строка : " + str);
-                    System.out.println("pos = " + str.indexOf('*'));
-                    out = getTwo(str, str.indexOf('*') + 1);  //+1 Потому что в getTwo добавляем '<'
+            for (int operationCount = 1; operationCount <= oNumber; operationCount++) {
+                if (currentLine.indexOf('*') > 0) {
+                    System.out.println("Входная строка : " + currentLine);
+                    System.out.println("pos = " + currentLine.indexOf('*'));
+                    out = getTwo(currentLine, currentLine.indexOf('*') + 1);  //+1 Потому что в getTwo добавляем '<'
                     x = out[0] * out[1];
                     System.out.println("Перемножение = " + x);
-                    if (xOper == oNumber) str = String.valueOf(x);
-                    else str = str.substring(0, (int) out[2]) + x + str.substring((int) (out[3] + 1), str.length());
+                    if (operationCount == oNumber) currentLine = String.valueOf(x);
+                    else currentLine = currentLine.substring(0, (int) out[2]) + x + currentLine.substring((int) (out[3] + 1), currentLine.length());
 
-                } else if (str.indexOf('/') > 0) {
-                    System.out.println("Входная строка : " + str);
-                    System.out.println("pos = " + str.indexOf('/'));
-                    out = getTwo(str, str.indexOf('/') + 1);  //+1 Потому что в getTwo добавляем '<'
+                } else if (currentLine.indexOf('/') > 0) {
+                    System.out.println("Входная строка : " + currentLine);
+                    System.out.println("pos = " + currentLine.indexOf('/'));
+                    out = getTwo(currentLine, currentLine.indexOf('/') + 1);  //+1 Потому что в getTwo добавляем '<'
                     x = out[0] / out[1];
                     System.out.println("Деление = " + x);
-                    if (xOper == oNumber) str = String.valueOf(x);
-                    else str = str.substring(0, (int) out[2]) + x + str.substring((int) (out[3] + 1), str.length());
+                    if (operationCount == oNumber) currentLine = String.valueOf(x);
+                    else currentLine = currentLine.substring(0, (int) out[2]) + x + currentLine.substring((int) (out[3] + 1), currentLine.length());
 
-                } else if (str.indexOf('+') > 0) {
-                    System.out.println("Входная строка : " + str);
-                    System.out.println("pos = " + str.indexOf('+'));
-                    out = getTwo(str, str.indexOf('+') + 1);  //+1 Потому что в getTwo добавляем '<'
+                } else if (currentLine.indexOf('+') > 0) {
+                    System.out.println("Входная строка : " + currentLine);
+                    System.out.println("pos = " + currentLine.indexOf('+'));
+                    out = getTwo(currentLine, currentLine.indexOf('+') + 1);  //+1 Потому что в getTwo добавляем '<'
                     x = out[0] + out[1];
                     System.out.println("Суммируем = " + x);
-                    if (xOper == oNumber) str = String.valueOf(x);
+                    if (operationCount == oNumber) currentLine = String.valueOf(x);
                     else {
-                        System.out.println("append : " +str.substring((int) (out[3] + 1), str.length()));
-                        str = str.substring(0, (int) out[2]) + x + str.substring((int) (out[3] + 1), str.length());
+                        System.out.println("append : " +currentLine.substring((int) (out[3] + 1), currentLine.length()));
+                        currentLine = currentLine.substring(0, (int) out[2]) + x + currentLine.substring((int) (out[3] + 1), currentLine.length());
                     }
 
-                } else if (str.indexOf('-') > 0) {
-                    System.out.println("Входная строка : " + str);
-                    System.out.println("pos = " + str.indexOf('-'));
-                    out = getTwo(str, str.indexOf('-') + 1);  //+1 Потому что в getTwo добавляем '<'
+                } else if (currentLine.indexOf('-') > 0) {
+                    System.out.println("Входная строка : " + currentLine);
+                    System.out.println("pos = " + currentLine.indexOf('-'));
+                    out = getTwo(currentLine, currentLine.indexOf('-') + 1);  //+1 Потому что в getTwo добавляем '<'
                     x = out[0] - out[1];
                     System.out.println("Вычитаем = " + x);
-                    if (xOper == oNumber) str = String.valueOf(x);
-                    else str = str.substring(0, (int) out[2]) + x + str.substring((int) (out[3] + 1), str.length());
+                    if (operationCount == oNumber) currentLine = String.valueOf(x);
+                    else currentLine = currentLine.substring(0, (int) out[2]) + x + currentLine.substring((int) (out[3] + 1), currentLine.length());
 
                 }
-                System.out.println("Результат = " + str);
+                System.out.println("Результат = " + currentLine);
             }
 
         }
