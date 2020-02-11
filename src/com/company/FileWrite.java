@@ -9,6 +9,8 @@ public class FileWrite {
 
     public static void write(String fileName, List<String> str) {
 
+        //Files.write(Paths.get("demo.txt"), lines, StandardOpenOption.CREATE);
+
         FileWriter nFile;
 
         try {

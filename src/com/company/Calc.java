@@ -46,7 +46,7 @@ public class Calc {
         inputMass = FileRead.read("input.txt");
         outputMass=inputMass;
         String currentLine = "";
-        float x = 0.0f;
+        float result = 0.0f;
         Pair out = new Pair();
         for (int i = 0; i < inputMass.size(); i++) {
             currentLine = inputMass.get(i);
@@ -61,40 +61,37 @@ public class Calc {
                     System.out.println("Входная строка : " + currentLine);
                     System.out.println("pos = " + currentLine.indexOf('*'));
                     out = getPair(currentLine, currentLine.indexOf('*') + 1);  //+1 Потому что в getTwo добавляем '<'
-                    x = out.firstNumber * out.secondNumber;
-                    System.out.println("Перемножение = " + x);
-                    if (operationCount == operationNumber) currentLine = String.valueOf(x);
-                    else currentLine = currentLine.substring(0,out.firstPosition) + x + currentLine.substring((out.secondPosition + 1), currentLine.length());
+                    result = out.firstNumber * out.secondNumber;
+                    System.out.println("Перемножение = " + result);
+                    if (operationCount == operationNumber) currentLine = String.valueOf(result);
+                    else currentLine = currentLine.substring(0,out.firstPosition) + result + currentLine.substring((out.secondPosition + 1), currentLine.length());
 
                 } else if (currentLine.indexOf('/') > 0) {
                     System.out.println("Входная строка : " + currentLine);
                     System.out.println("pos = " + currentLine.indexOf('/'));
                     out = getPair(currentLine, currentLine.indexOf('/') + 1);  //+1 Потому что в getTwo добавляем '<'
-                    x = out.firstNumber / out.secondNumber;
-                    System.out.println("Деление = " + x);
-                    if (operationCount == operationNumber) currentLine = String.valueOf(x);
-                    else currentLine = currentLine.substring(0, out.firstPosition) + x + currentLine.substring((out.secondPosition + 1), currentLine.length());
+                    result = out.firstNumber / out.secondNumber;
+                    System.out.println("Деление = " + result);
+                    if (operationCount == operationNumber) currentLine = String.valueOf(result);
+                    else currentLine = currentLine.substring(0, out.firstPosition) + result + currentLine.substring((out.secondPosition + 1), currentLine.length());
 
                 } else if (currentLine.indexOf('+') > 0) {
                     System.out.println("Входная строка : " + currentLine);
                     System.out.println("pos = " + currentLine.indexOf('+'));
                     out = getPair(currentLine, currentLine.indexOf('+') + 1);  //+1 Потому что в getTwo добавляем '<'
-                    x = out.firstNumber + out.secondNumber;
-                    System.out.println("Суммируем = " + x);
-                    if (operationCount == operationNumber) currentLine = String.valueOf(x);
-                    else {
-                        System.out.println("append : " +currentLine.substring((out.secondPosition + 1), currentLine.length()));
-                        currentLine = currentLine.substring(0, out.firstPosition) + x + currentLine.substring((out.secondPosition + 1), currentLine.length());
-                    }
+                    result = out.firstNumber + out.secondNumber;
+                    System.out.println("Суммируем = " + result);
+                    if (operationCount == operationNumber) currentLine = String.valueOf(result);
+                    else currentLine = currentLine.substring(0, out.firstPosition) + result + currentLine.substring((out.secondPosition + 1), currentLine.length());
 
                 } else if (currentLine.indexOf('-') > 0) {
                     System.out.println("Входная строка : " + currentLine);
                     System.out.println("pos = " + currentLine.indexOf('-'));
                     out = getPair(currentLine, currentLine.indexOf('-') + 1);  //+1 Потому что в getTwo добавляем '<'
-                    x = out.firstNumber - out.secondNumber;
-                    System.out.println("Вычитаем = " + x);
-                    if (operationCount == operationNumber) currentLine = String.valueOf(x);
-                    else currentLine = currentLine.substring(0, out.firstPosition) + x + currentLine.substring((out.secondPosition + 1), currentLine.length());
+                    result = out.firstNumber - out.secondNumber;
+                    System.out.println("Вычитаем = " + result);
+                    if (operationCount == operationNumber) currentLine = String.valueOf(result);
+                    else currentLine = currentLine.substring(0, out.firstPosition) + result + currentLine.substring((out.secondPosition + 1), currentLine.length());
 
                 }
                 System.out.println("Результат = " + currentLine);
