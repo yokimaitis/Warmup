@@ -16,7 +16,7 @@ public class Calc {
                 System.out.println("SecondNumber = " + instr.substring(pos + 1, i));
                 ar[1] = Float.valueOf(instr.substring(pos + 1, i));
                 ar[3] = i-2;
-                System.out.println("ar[3] =" + pos);
+      //          System.out.println("ar[3] =" + pos);
                 break;
             }
         }
@@ -38,7 +38,7 @@ public class Calc {
         String str = "";
         float x = 0.0f;
         float[] out = new float[4];
-        for (int i = 0; i < 1; i++) {
+        for (int i = 0; i < inputMass.size(); i++) {
             str = inputMass.get(i);
             oNumber = 0;
             for (int j = 0; j < str.length(); j++) {
