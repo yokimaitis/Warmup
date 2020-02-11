@@ -33,5 +33,6 @@ public class Main {
         WLN.write(Warmup.stringX("xAaxxxxbbxxVBx"));
 
         new Calc().calculate();
+
         }
 }

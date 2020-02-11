@@ -13,6 +13,7 @@ public class Calc {
     }
 
     List<String> inputMass = new ArrayList<>();
+    List<String> outputMass = new ArrayList<>();
     int operationNumber = 0;
 
     Pair getPair(String instr, int pos) {
@@ -23,7 +24,7 @@ public class Calc {
             } else {
                 System.out.println("SecondNumber = " + instr.substring(pos + 1, i));
                 numbers.secondNumber = Float.valueOf(instr.substring(pos + 1, i));
-                numbers.secondPosition = i-2;
+                numbers.secondPosition = i-2;  //1 - добавленный "<", 2 - один символ до знака
       //          System.out.println("numbers[3] =" + pos);
                 break;
             }
@@ -42,7 +43,8 @@ public class Calc {
     }
 
     void calculate() {
-        inputMass = FileRead.read("111.txt");
+        inputMass = FileRead.read("input.txt");
+        outputMass=inputMass;
         String currentLine = "";
         float x = 0.0f;
         Pair out = new Pair();
@@ -97,8 +99,10 @@ public class Calc {
                 }
                 System.out.println("Результат = " + currentLine);
             }
+            System.out.println(i);outputMass.set(i,outputMass.get(i)+"="+currentLine);
 
         }
+        FileWrite.write("output.txt",outputMass);
 
     }
 
