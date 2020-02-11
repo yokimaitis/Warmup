@@ -99,7 +99,7 @@ public class Calc {
                 }
                 System.out.println("Результат = " + currentLine);
             }
-            System.out.println(i);outputMass.set(i,outputMass.get(i)+"="+currentLine);
+            outputMass.set(i,outputMass.get(i)+"="+currentLine);
 
         }
         FileWrite.write("output.txt",outputMass);
